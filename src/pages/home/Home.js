@@ -1,16 +1,11 @@
-import Figure from "common/components/figure";
-import { images } from "common/enums/images";
+import Results from 'common/components/results';
+import OpeningImage from 'common/components/opening-image';
 
 const Home = () => {
   return (
     <>
-      <Figure
-        desktop={images.homeOpening.desktop}
-        mobile={images.homeOpening.mobile}
-        tablet={images.homeOpening.tablet}
-        title={"home-opening"}
-        fullWidth
-      />
+      <OpeningImage />
+      <Results />
     </>
   );
 };

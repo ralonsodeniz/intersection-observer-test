@@ -11,6 +11,5 @@ export const Wrapper = styled.div`
 export const Main = styled.main`
   flex: 1;
   position: relative;
-  min-height: 2000px;
   margin-top: -${headerOffset}px;
 `;

@@ -1,4 +1,5 @@
 export const breakPoints = {
+  smallMobile: 374,
   mobile: 414,
   portrait: 768,
   landscape: 1024,
@@ -7,6 +8,7 @@ export const breakPoints = {
 };
 
 export const mediaQueries = {
+  smallMobileOnly: `@media only screen and (max-width: ${breakPoints.smallMobile}px)`,
   mobileOnly: `@media only screen and (max-width: ${breakPoints.mobile}px)`,
   portrait: `@media only screen and (min-width: ${breakPoints.portrait}px)`,
   landscape: `@media only screen and (min-width: ${breakPoints.landscape}px)`,

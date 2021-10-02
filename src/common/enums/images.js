@@ -1,6 +1,6 @@
-import homeOpeningMobile from "assets/image/alayna-tam-xmIrHafFlP0-unsplash-small.jpeg";
-import homeOpeningTablet from "assets/image/alayna-tam-xmIrHafFlP0-unsplash.jpeg";
-import homeOpeningDesktop from "assets/image/alayna-tam-xmIrHafFlP0-unsplash-large.jpeg";
+import homeOpeningMobile from "assets/image/home-opening-mobile.jpeg";
+import homeOpeningTablet from "assets/image/home-opening-tablet.jpeg";
+import homeOpeningDesktop from "assets/image/home-opening-desktop.jpeg";
 
 export const images = {
   homeOpening: {
