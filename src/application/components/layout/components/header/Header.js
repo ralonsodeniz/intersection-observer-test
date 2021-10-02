@@ -20,6 +20,7 @@ import {
   Text,
   ListBackground,
 } from './Header.styled';
+import { testIds } from './__test__/test-ids';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -47,14 +48,14 @@ const Header = () => {
     dispatch(setItem(null));
   };
   const handleClickHeader = () => setOpen(prevState => prevState && false);
-  const stopPropagation = (event) => event.stopPropagation();
+  const stopPropagation = event => event.stopPropagation();
 
   return (
     <>
       <StickySentinel ref={sentinelRef} />
       <Root isSticky={isSticky} onClick={handleClickHeader}>
         <Content>
-          <LogoContainer onClick={handleClickLogo}>
+          <LogoContainer onClick={handleClickLogo} data-testid={testIds.logo}>
             <Logo />
           </LogoContainer>
           {!isLoading && !error ? (
@@ -88,7 +89,7 @@ const Header = () => {
               </List>
             </Categories>
           ) : (
-            <SpinnerContainer>
+            <SpinnerContainer data-testid={testIds.spinner}>
               <Spinner />
             </SpinnerContainer>
           )}
