@@ -1,11 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { mediaQueries } from 'styles/config/media-queries';
-
-const disabledButtonStyles = css`
-  pointer-events: none;
-  background-color: ${({ theme }) => theme.palette.gradients.header};
-  cursor: not-allowed;
-`;
+import { StyledButton } from 'common/components/button/Button.styled';
 
 export const Root = styled.div`
   display: flex;
@@ -13,7 +8,7 @@ export const Root = styled.div`
   justify-content: space-between;
   padding: 0 10px;
   flex: 1;
-  min-height: 355px;
+  min-height: ${({ hasItems }) => (hasItems ? '355px' : 'auto')};
   margin-top: ${({ selectedItemHeight }) =>
     selectedItemHeight ? selectedItemHeight + 70 : 0}px;
   transition: margin-top 500ms ease-in-out;
@@ -48,23 +43,12 @@ export const ListContainer = styled.ul`
   align-items: flex-start;
 `;
 
-export const Button = styled.button`
-  border-radius: 4px;
-  background-color: ${({ theme }) => theme.palette.primary};
-  color: ${({ theme }) => theme.palette.secondary};
-  padding: 10px;
-  appearance: none;
-  border: none;
-  min-width: 100px;
-  ${({ enabled }) => !enabled && disabledButtonStyles};
-`;
-
 export const ButtonsContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
   margin-top: 30px;
-  ${Button} + ${Button} {
+  ${StyledButton} + ${StyledButton} {
     margin-left: 40px;
   }
 `;
