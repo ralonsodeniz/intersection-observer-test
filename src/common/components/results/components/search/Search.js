@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from 'common/components/button';
-import { Input, Label, Root } from './Search.styled';
+import { CloseContainer, Input, Label, Root, CloseIcon } from './Search.styled';
 import { literals } from './literals';
 
 const Search = ({ setSearch }) => {
@@ -21,6 +21,7 @@ const Search = ({ setSearch }) => {
     const { code } = event;
     if (code === 'NumpadEnter' || code === 'Enter') setSearch(value);
   };
+  const handleClearSearch = () => setValue('')
 
   return (
     <Root>
@@ -36,6 +37,9 @@ const Search = ({ setSearch }) => {
         onKeyUp={handleKeyPress}
         type="text"
       />
+      <CloseContainer onClick={handleClearSearch}>
+        <CloseIcon />
+      </CloseContainer>
       <Button type="button" onClick={handleSearch} enabled>
         {literals.button}
       </Button>

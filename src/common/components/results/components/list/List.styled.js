@@ -8,7 +8,7 @@ export const Root = styled.div`
   justify-content: space-between;
   padding: 0 10px;
   flex: 1;
-  min-height: ${({ hasItems }) => (hasItems ? '355px' : 'auto')};
+  min-height: ${({ minHeight }) => (minHeight ? '355px' : 'auto')};
   margin-top: ${({ selectedItemHeight }) =>
     selectedItemHeight ? selectedItemHeight + 70 : 0}px;
   transition: margin-top 500ms ease-in-out;

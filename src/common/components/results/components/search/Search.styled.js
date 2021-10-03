@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { mediaQueries } from 'styles/config/media-queries';
+import { ReactComponent as Close } from 'assets/svg/close.svg';
 
 const miniLabelStyles = css`
   font-size: 12px;
@@ -35,7 +36,20 @@ export const Label = styled.label`
 export const Input = styled.input`
   margin-bottom: 20px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 30px 10px 10px;
   border-radius: 4px;
   border: 2px solid ${({ theme }) => theme.palette.primary};
+`;
+
+export const CloseContainer = styled.div`
+  display: flex;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  cursor: pointer;
+`;
+
+export const CloseIcon = styled(Close)`
+  width: 13px;
+  height: auto;
 `;

@@ -33,7 +33,7 @@ const List = ({ category, selectedItemHeight, search = '' }) => {
   }, [category, search]);
 
   return (
-    <Root selectedItemHeight={selectedItemHeight} hasItems={hasItems}>
+    <Root selectedItemHeight={selectedItemHeight} minHeight={hasItems || isLoading}>
       {!isLoading ? (
         <ListContainer>
           {hasItems
