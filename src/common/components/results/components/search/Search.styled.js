@@ -52,4 +52,5 @@ export const CloseContainer = styled.div`
 export const CloseIcon = styled(Close)`
   width: 13px;
   height: auto;
+  fill: ${({ theme }) => theme.palette.gradients.header};
 `;
